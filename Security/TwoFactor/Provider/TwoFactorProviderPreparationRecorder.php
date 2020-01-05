@@ -36,5 +36,6 @@ class TwoFactorProviderPreparationRecorder
         }
         $calledProviders[$firewallName][] = $providerName;
         $this->session->set(self::CALLED_PROVIDERS_SESSION_KEY, $calledProviders);
+        $this->session->save();
     }
 }
